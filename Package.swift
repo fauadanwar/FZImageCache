@@ -15,7 +15,7 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "FZImageCache",
-      sources: [FZImageCache/FZImageCache.h],
+      sources: ["FZImageCache/FZImageCache.h"],
       path: "./FZImageCache.xcframework")
   ]
 )
