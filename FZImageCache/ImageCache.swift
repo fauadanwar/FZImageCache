@@ -6,9 +6,13 @@ The Image cache.
 */
 import UIKit
 import Foundation
-@objc public class ImageCache: NSObject {
+
+@objc final public class ImageCache: NSObject {
     
     @objc public static let publicCache = ImageCache()
+    private override init() {
+        super.init()
+    }
     @objc public var placeholderImage = UIImage(systemName: "photo.fill.on.rectangle.fill")!
     private let cachedImages = NSCache<NSURL, UIImage>()
     private var loadingResponses = [NSURL: [(AnyHashable, UIImage?) -> Swift.Void]]()

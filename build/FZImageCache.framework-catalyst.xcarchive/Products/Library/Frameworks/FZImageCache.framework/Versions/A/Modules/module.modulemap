@@ -1,0 +1,11 @@
+framework module FZImageCache {
+  umbrella header "FZImageCache.h"
+
+  export *
+  module * { export * }
+}
+
+module FZImageCache.Swift {
+    header "FZImageCache-Swift.h"
+    requires objc
+}
